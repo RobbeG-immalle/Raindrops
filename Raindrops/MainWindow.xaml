@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Raindrops"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="750" Width="1250">
     <Grid>
-        
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FF2D3034" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Canvas x:Name="mijnCanvas" HorizontalAlignment="Left" Height="709" VerticalAlignment="Top" Width="1090" Margin="142,0,0,0">
+            <Canvas.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF2D3034" Offset="1"/>
+                </LinearGradientBrush>
+            </Canvas.Background>
+        </Canvas>
+        <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" Height="36" Margin="24,41,0,0" VerticalAlignment="Top" Width="95" Click="startButton_Click"/>
+        <Button x:Name="stopButton" Content="Stop" HorizontalAlignment="Left" Height="36" Margin="24,94,0,0" VerticalAlignment="Top" Width="95" Click="stopButton_Click"/>
+        <Button x:Name="clearButton" Content="Clear" HorizontalAlignment="Left" Height="35" Margin="24,151,0,0" VerticalAlignment="Top" Width="95" Click="clearButton_Click"/>
+        <Slider x:Name="gapSlider" HorizontalAlignment="Left" Margin="10,250,0,0" VerticalAlignment="Top" Width="109" ValueChanged="gapSlider_ValueChanged"/>
+        <Label x:Name="gapLabel" Content="" HorizontalAlignment="Left" Margin="24,268,0,0" VerticalAlignment="Top" Width="95"/>
+
     </Grid>
 </Window>
